@@ -2,24 +2,28 @@
 
 Simple and minimal web game with Dockerfile to be used on demos
 
-![https://raw.githubusercontent.com/wayou/t-rex-runner/gh-pages/assets/screenshot.gif](https://raw.githubusercontent.com/wayou/t-rex-runner/gh-pages/assets/screenshot.gif)
+## Demo with public image
 
-## Build
+```
+docker run -d --rm --name hello-world-docker -p 80:80 jrichardsz/hello-world-docker
+```
+
+## Build and deploy from source code
 
 ```
 docker build -t hello-world-docker
-```
-## Run
-
-```
-docker run --rm --name hello-world-docker -p 8080:80 hello-world-docker
+docker run -d --rm --name hello-world-docker -p 80:80 hello-world-docker
 ```
 
 ## Url
 
-```
-http://localhost:8080
-```
+Open `http://localhost` in your favourite browser and you should see the dinosaur 
+
+![https://raw.githubusercontent.com/wayou/t-rex-runner/gh-pages/assets/screenshot.gif](https://raw.githubusercontent.com/wayou/t-rex-runner/gh-pages/assets/screenshot.gif)
+
+## Details
+
+- Internal port (inside container) is 80
 
 ## Acknowledgments
 
